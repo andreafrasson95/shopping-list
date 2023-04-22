@@ -15,7 +15,7 @@ const FormItem = (props) => {
         var json = JSON.stringify(object);
 
 
-        axios.post('http://192.168.1.110:5000/shoppinglist/', json, {
+        axios.post('http://localhost:5000/shoppinglist/', json, {
             withCredentials: true,
             headers: {
                 'Content-Type': 'application/json'

@@ -24,7 +24,7 @@ const Login = () => {
     var json = JSON.stringify(object);
 
 
-    axios.post('http://192.168.1.110:5000/shoppinglist/auth/login', json, {
+    axios.post('http://localhost:5000/shoppinglist/auth/login', json, {
       headers: {
         'Content-Type': 'application/json'
       },

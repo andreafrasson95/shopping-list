@@ -10,7 +10,7 @@ require('dotenv').config();
 const notFound=require('./middleware/not-found');
 const errorHandler=require('./middleware/error-handler');
 const authentication= require('./middleware/auth');
-const port=5000;
+const port= process.env.PORT || 5000;
 
 const app=express();
 //Middleware

@@ -12,7 +12,7 @@ function Itemlist() {
     const navigate = useNavigate();
     
     useEffect(() => {
-        axios.get(`http://192.168.1.110:5000/shoppinglist`,{withCredentials:true})
+        axios.get(`http://localhost:5000/shoppinglist`,{withCredentials:true})
             .then(res => {
                 const items = res.data;
                 setItems(items);
@@ -26,7 +26,7 @@ function Itemlist() {
     }, [count, navigate]);
 
     const handleDelete = (itemId) => {
-        axios.delete('http://192.168.1.110:5000/shoppinglist/' + itemId, {withCredentials:true})
+        axios.delete('http://localhost:5000/shoppinglist/' + itemId, {withCredentials:true})
             .then(res => {
                 console.log(res);
                 const filtered = items.filter(item => item._id !== itemId);
